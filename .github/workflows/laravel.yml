@@ -18,9 +18,8 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       #    - name: Install Dependencies
       #      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-#      - name: Install Dependencies
-#        run: composer install --no-dev --no-interaction --prefer-dist
-#        run: composer update
+      - name: Install Dependencies
+        run: composer install --no-dev --no-interaction --prefer-dist
 
   #    - name: Deploy
   #      if: github.ref == 'refs/heads/master'
@@ -46,15 +45,15 @@ jobs:
     steps:
       - run: |
           d:
-          mkdir -p database
+          mkdir akibTest
       - name: Checkout
 
         uses: actions/checkout@v3
 
         with:
           script: |
-            d:
-            mkdir akibTest
+#            d:
+#            mkdir akibTest
 #            \c\Code\gitActionTesting
 #            git checkout -f
 #            git pull origin master
