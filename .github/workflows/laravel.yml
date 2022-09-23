@@ -53,17 +53,11 @@ jobs:
         uses: appleboy/ssh-action@master
 
         with:
-          host: host
-          username: username
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          script_stop: true
-#          host: ${{ secrets.SSH_HOST }}
-#          key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          username: ${{ secrets.SSH_USERNAME }}
-#          host: ${{ secrets.HOST }}
-#          username: ${{ secrets.USERNAME }}
-#          password: ${{ secrets.PASSWORD }}
-
+          port: ${{ secrets.PORT }}
+          script: whoami
 #          script: |
 #
 #            \c:
