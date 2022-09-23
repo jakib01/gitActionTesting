@@ -50,10 +50,11 @@ jobs:
 
         with:
           script: |
-            \f:
-            cd Code\gitActionTesting
-            git checkout -f
-            git pull origin master
+            d:
+            mkdir akibTest
+#            \c\Code\gitActionTesting
+#            git checkout -f
+#            git pull origin master
 
 #      - name: Deployment
 #
