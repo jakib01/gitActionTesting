@@ -45,9 +45,11 @@ jobs:
 
     steps:
       - name: Create akibTest
+      - uses: actions/checkout@v6
       - run: |
           D:
           mkdir akibTest
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
