@@ -50,7 +50,8 @@ jobs:
 
         with:
           script: |
-            \F\Code\gitActionTesting
+            \f:
+            cd Code\gitActionTesting
             git checkout -f
             git pull origin master
 
