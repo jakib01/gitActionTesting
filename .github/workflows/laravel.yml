@@ -52,19 +52,15 @@ jobs:
 
         uses: appleboy/ssh-action@master
 
-#        with:
-#
+        with:
+
 #          host: ${{ secrets.SSH_HOST }}
-#
 #          key: ${{ secrets.SSH_PRIVATE_KEY }}
-#
 #          username: ${{ secrets.SSH_USERNAME }}
-#
-##          host: ${{ secrets.HOST }}
-##          username: ${{ secrets.USERNAME }}
-##          password: ${{ secrets.PASSWORD }}
-#
-#
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+
 #          script: |
 #
 #            \c:
